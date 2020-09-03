@@ -12,7 +12,7 @@ public class App {
     public static void main(String[] args) {
         int[] entry = {6, 2, 4, 7, 1, 2, 3};
         printArray(entry);
-        int[] result = BubbleSort.sort(entry, SortingOrder.ASC);
+        int[] result = new BubbleSort().sort(entry, SortingOrder.ASC);
         printArray(entry);
         printArray(result);
     }

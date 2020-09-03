@@ -1,23 +1,24 @@
-package com.innovative.algo;
+package com.innovative.algo.sorting;
 
 import com.innovative.algo.domain.SortingOrder;
-import com.innovative.algo.sorting.BubbleSort;
 import org.junit.Test;
-
 
 import java.util.Arrays;
 
+import static com.innovative.algo.Utils.assertOrdered;
 import static com.innovative.algo.Utils.printArray;
 import static org.junit.Assert.*;
 
-public class BubbleSortTest {
+public class SelectionSortTest {
+
+    private final SelectionSort selectionSort = new SelectionSort();
 
     @Test
     public void sortAsc() {
         int[] entry = {6, 2, 4, 7, 1, 2, 3};
         printArray(entry);
 
-        int[] result = BubbleSort.sort(entry, SortingOrder.ASC);
+        int[] result = selectionSort.sort(entry, SortingOrder.ASC);
 
         printArray(entry);
         printArray(result);
@@ -31,7 +32,7 @@ public class BubbleSortTest {
         int[] entry = {6, 2, 4, 7, 1, 2, 3};
         printArray(entry);
 
-        int[] result = BubbleSort.sort(entry, SortingOrder.DESC);
+        int[] result = selectionSort.sort(entry, SortingOrder.DESC);
 
         printArray(entry);
         printArray(result);
@@ -43,29 +44,10 @@ public class BubbleSortTest {
     }
 
     @Test
-    public void sorAsctOnInputVariable() {
+    public void sortAsctOnInputVariable() {
         int[] entry = {6, 2, 4, 7, 1, 2, 3};
-        BubbleSort.sortInput(entry, SortingOrder.DESC);
+        selectionSort.sortInput(entry, SortingOrder.DESC);
         assertEquals("7643221", Arrays.toString(entry).replaceAll("[^\\d.]", ""));
         assertOrdered(entry, SortingOrder.DESC);
     }
-
-    @Test
-    public void sortDescOnInputVariable() {
-        int[] entry = {6, 2, 4, 7, 1, 2, 3};
-        BubbleSort.sortInput(entry, SortingOrder.DESC);
-        assertEquals("7643221", Arrays.toString(entry).replaceAll("[^\\d.]", ""));
-        assertOrdered(entry, SortingOrder.DESC);
-    }
-
-    private void assertOrdered(int[] entry, SortingOrder sortingOrder) {
-        for(int i =0 ; i< entry.length-1; i++){
-            if(SortingOrder.ASC.equals(sortingOrder)){
-                assertTrue(entry[i]<=entry[i+1]);
-            } else{
-                assertTrue(entry[i]>=entry[i+1]);
-            }
-        }
-    }
-
 }
