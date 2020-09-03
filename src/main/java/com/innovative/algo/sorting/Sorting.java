@@ -7,9 +7,9 @@ import com.innovative.algo.domain.SortingOrder;
  */
 public abstract class Sorting {
 
-    abstract int[] sort(int[] entry, SortingOrder sortingOrder);
+    public  abstract int[] sort(int[] entry, SortingOrder sortingOrder);
 
-    abstract void sortInput(int[] entry, SortingOrder sortingOrder);
+    public abstract void sortInput(int[] entry, SortingOrder sortingOrder);
 
     protected void swapTuple(int[] entry, int position1,int position2) {
         int temporary = entry[position1];

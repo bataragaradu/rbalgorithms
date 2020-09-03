@@ -1,6 +1,7 @@
 package com.innovative.algo.sorting;
 
 import com.innovative.algo.domain.SortingOrder;
+import com.innovative.algo.sorting.quadratic.SelectionSort;
 import org.junit.Test;
 
 import java.util.Arrays;

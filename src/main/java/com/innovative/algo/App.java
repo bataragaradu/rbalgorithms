@@ -3,7 +3,7 @@ package com.innovative.algo;
 
 
 import com.innovative.algo.domain.SortingOrder;
-import com.innovative.algo.sorting.BubbleSort;
+import com.innovative.algo.sorting.quadratic.BubbleSort;
 
 import java.util.stream.IntStream;
 

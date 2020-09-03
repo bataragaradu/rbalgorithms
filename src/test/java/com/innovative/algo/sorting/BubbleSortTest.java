@@ -1,6 +1,7 @@
 package com.innovative.algo.sorting;
 
 import com.innovative.algo.domain.SortingOrder;
+import com.innovative.algo.sorting.quadratic.BubbleSort;
 import org.junit.Test;
 
 
